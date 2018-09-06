@@ -1,0 +1,13 @@
+{
+  "name": "savecard",
+  "version": "1.0.0",
+  "description": "Fake saving a card to verifone",
+  "main": "index.js",
+  "repository": "https://github.com/ztolley/savecard",
+  "author": "Zac Tolley",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
