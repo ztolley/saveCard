@@ -1,0 +1,33 @@
+<html>
+
+<head>
+  <title>Mondo Bank - Security Authorization</title>
+  <link rel="stylesheet" type="text/css" href="/3d.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="banklogo">
+      <span class="banklogo_image"></span>
+      <h1 class="bankname">Mondo</h1>
+      <h2 class="cardlogo">
+        Mastercard
+        <span class="cardlogo-sub">ID Check</span>
+      </h2>
+    </header>
+
+    <main>
+      <p class="message">Approved. Please wait one moment.</p>
+      <form id="form" action="{{TermURL}}" method="post">
+        <input type="hidden" name="PARes" value="{{PARes}}" />
+      </form>
+    </main>
+  </div>
+
+  <script>
+    document.querySelector('#form').submit();
+  </script>
+</body>
+
+</html>

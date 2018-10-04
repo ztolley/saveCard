@@ -1,0 +1,125 @@
+body {
+  height: 100%;
+  position: relative;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #0b0c0c;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  border: 1px solid #6f777b;
+  box-shadow: 0 6px 6px -6px #6f777b;
+  margin: 0;
+  position: absolute;
+  padding: 15px;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  min-width: 320px;
+  width: 355px;
+}
+
+.banklogo_image {
+  -webkit-background-size: 50px 50px;
+  background-size: 50px 50px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  display: inline-block;
+  margin: -1px;
+  overflow: hidden;
+  position: relative;
+  height: 50px;
+  width: 50px;
+  z-index: 0;
+  background-image: url(/photo.jpg);
+  line-height: 50px;
+}
+
+.banklogo_image::before {
+  background: url(/photo.jpg) -20px -20px no-repeat;
+}
+
+.bankname {
+  display: inline-block;
+  margin: 0;
+}
+
+.cardlogo {
+  font-size: 0.6em;
+  display: inline-block;
+  top: 5px;
+  right: 15px;
+  padding-left: 30px;
+  position: absolute;
+  background: url("/mc_vrt_rev.svg") top left no-repeat;
+}
+
+.cardlogo-sub {
+  color: #6f777b;
+  display: block;
+}
+
+.transaction {
+  margin: 0 0 30px;
+  position: relative;
+}
+
+.merchant {
+  font-weight: 400;
+  font-size: 1.3em;
+  display: inline-block;
+}
+
+.date,
+.cardNum {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 0.8em;
+  color: #6f777b;
+}
+
+.total {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+}
+
+.total-currency {
+  font-size: 0.8em;
+}
+
+.total-amount {
+  font-size: 1.5em;
+}
+
+.message {
+  margin-bottom: 30px;
+}
+
+.button {
+  background-color: #0366ff;
+  border: 2px solid transparent;
+  border-radius: 0;
+  box-shadow: 0 2px 0 #0b0c0c;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
+  margin: 0 0 8px;
+  padding: 8px 10.56px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: top;
+  -webkit-appearance: none;
+}
+
+.button:active {
+  box-shadow: none;
+  top: 2px;
+}

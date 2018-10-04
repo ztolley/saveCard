@@ -1,0 +1,41 @@
+<html>
+
+<head>
+  <title>Mondo Bank - Security Authorization</title>
+  <link rel="stylesheet" type="text/css" href="/3d.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="banklogo">
+      <span class="banklogo_image"></span>
+      <h1 class="bankname">Mondo</h1>
+      <h2 class="cardlogo">
+        Mastercard
+        <span class="cardlogo-sub">ID Check</span>
+      </h2>
+    </header>
+
+    <main>
+      <div class="transaction">
+        <p class="merchant">Waitrose</p>
+        <p class="date">Monday 23rd October 2018, 13:00</p>
+        <p class="cardNum">555-22##-####-1234</p>
+        <p class="total">
+          <span class="total-currency">£</span>
+          <span class="total-amount">256.00</span>
+        </p>
+      </div>
+
+      <p class="message">Please approve this transaction</p>
+
+      <form id="approve-form" action="/bank/auth" method="post">
+        <input type="hidden" name="TermURL" value="{{TermURL}}" />
+        <button type="submit" class="button">Approve</button>
+      </form>
+    </main>
+  </div>
+</body>
+
+</html>
