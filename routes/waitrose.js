@@ -8,9 +8,10 @@ const router = require("express").Router();
 router.post("/3dscallback", (req, res) => {
   const { payerAuthRequestId, returnURL } = req.query;
   const { PARes } = req.body;
-
-  // Store the payer request id and PARes in redis
-  // Redirect browser to page informing the FE we are done
+  
+  // Store the PARes in redis with the payerAuthRequestId as a lookup
+ 
+  // Go back to the front end
   res.redirect(302, returnURL);
 });
 
