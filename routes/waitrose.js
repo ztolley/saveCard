@@ -1,18 +1,19 @@
 const router = require("express").Router();
 
 // Waitrose 3D Secure Callback URL
-// Accepts a HTTP with a body containing PAYRes.
-// The payerAuthRequestId is contained in the url,
-// along with a url to forward the browser to
-// in order to tell it to close the frame
+// Accepts a HTTP with a body containing PAYRes
+// and payerAuthRequestId, stored in the MD field
+// Store them in cache then forward the browser to the page to done page
 router.post("/3dscallback", (req, res) => {
-  const { payerAuthRequestId, returnURL } = req.query;
-  const { PARes } = req.body;
-  
-  // Store the PARes in redis with the payerAuthRequestId as a lookup
- 
+  const { PaRes, MD: payerAuthRequestId } = req.body;
+
+  // Store the PARes in cache with the payerAuthRequestId as a lookup
+
   // Go back to the front end
-  res.redirect(302, returnURL);
+  res.redirect(
+    302,
+    "https://local.waitrose.com/ecom/assets/formbuilder.html?done=true"
+  );
 });
 
 module.exports = router;

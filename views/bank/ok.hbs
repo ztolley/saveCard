@@ -19,7 +19,8 @@
 
     <main>
       <p class="message">Approved. Please wait one moment.</p>
-      <form id="form" action="{{TermURL}}" method="post">
+      <form id="form" action="{{TermUrl}}" method="post">
+        <input type="hidden" name="MD" value="{{MD}}" />
         <input type="hidden" name="PARes" value="{{PARes}}" />
       </form>
     </main>
