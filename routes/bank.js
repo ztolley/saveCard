@@ -13,7 +13,10 @@ router.get("/3ds", (req, res, next) => {
 
 // 3D Secure form
 router.use("/3ds", (req, res) => {
-  res.render("bank/3ds", { ...req.body });
+  res.render("bank/3ds", {
+    ...req.body,
+    returnUrl: `${req.get("Referer")}?done=true`
+  });
 });
 
 // 3D secure authentication processor
